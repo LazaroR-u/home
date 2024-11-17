@@ -10,7 +10,7 @@ const pictureLinkRegex = new RegExp(
 const AboutMe = ({ heading, message, link, imgSize, resume }) => {
   const [profilePicUrl, setProfilePicUrl] = React.useState("");
   const [showPic, setShowPic] = React.useState(Boolean(link));
-  // https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
+
   React.useEffect(() => {
     const handleRequest = async () => {
       const instaLink = "https://www.instagram.com/";
@@ -31,15 +31,13 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
     }
   }, [link]);
 
-
-
   return (
     <Jumbotron id="aboutme" className="m-0">
       <div className="container row">
         <div className="col-5 d-none d-lg-block align-self-center">
           {showPic && (
             <img
-              className="border border-secondary rounded-circle"
+              className="border border-secondary"
               src={profilePicUrl}
               alt="profilepicture"
               width={imgSize}

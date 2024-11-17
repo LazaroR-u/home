@@ -3,3 +3,30 @@
 @import "./index";
 @import "./stars";
 @import "./typography";
+
+/* Estilos personalizados para las experiencias */
+
+/* Contenedor principal para las tarjetas */
+.experience-container {
+  display: flex; /* Alinea las tarjetas en una fila */
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan si no caben */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 20px; /* Espaciado entre las tarjetas */
+  margin-top: 20px; /* Espaciado superior opcional */
+}
+
+/* Estilo para cada tarjeta */
+.experience-card {
+  text-align: center; /* Centra el contenido dentro de cada tarjeta */
+  width: 300px; /* Ancho fijo para cada tarjeta */
+  margin: 20px; /* Espaciado alrededor de las tarjetas */
+}
+
+/* Estilo para las imágenes */
+.experience-image {
+  width: 280px; /* Ancho fijo */
+  height: 280px; /* Alto fijo */
+  object-fit: contain; /* Asegura que las imágenes no se deformen */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para las imágenes */
+}

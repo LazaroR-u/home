@@ -20,7 +20,6 @@ import Skills from "./components/home/Skills";
 // import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
-
 import Experience from "./components/home/Experience";
 
 const Home = React.forwardRef((props, ref) => {
@@ -42,15 +41,11 @@ const Home = React.forwardRef((props, ref) => {
           resume={about.resume}
         />
       )}
-      {
-        experiences.show && (
-          <Experience experiences={experiences}/>
-        )
-      }
+      {experiences.show && <Experience experiences={experiences} />}
       {repos.show && (
         <Project
           heading={repos.heading}
-          username={repos.gitHubUsername}
+          username={repos.gitHubUsername.trim()} // Elimina espacios innecesarios
           length={repos.reposLength}
           specfic={repos.specificRepos}
         />
@@ -70,7 +65,6 @@ const Home = React.forwardRef((props, ref) => {
           softSkills={skills.softSkills}
         />
       )}
-      
     </>
   );
 });
@@ -79,13 +73,19 @@ const App = () => {
   const titleRef = React.useRef();
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
+    <BrowserRouter>
+      {/* Renderiza la barra de navegación si está habilitada */}
       {navBar.show && <Navbar ref={titleRef} />}
+      
+      {/* Configuración de las rutas principales */}
       <Routes>
-        <Route path="/" exact element={<Home ref={titleRef} />} />
+        {/* Ruta principal */}
+        <Route path="/" element={<Home ref={titleRef} />} />
+        {/* Ruta adicional para /home */}
+        <Route path="/home" element={<Home ref={titleRef} />} />
       </Routes>
-      {/* {false && <Route path="/blog" exact component={Blog} />}
-      {false && <Route path="/blog/:id" component={BlogPost} />} */}
+      
+      {/* Renderiza el pie de página y la sección de contacto si está habilitada */}
       <Footer>
         {getInTouch.show && (
           <GetInTouch
