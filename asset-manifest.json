@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/home/static/css/main.b1a3edc1.css",
+    "main.js": "/home/static/js/main.5f20c246.js",
+    "static/js/787.6971d1b3.chunk.js": "/home/static/js/787.6971d1b3.chunk.js",
+    "static/media/lazaror.jpg": "/home/static/media/lazaror.080b4e5cd981dd956d09.jpg",
+    "static/media/CERN_logo.png": "/home/static/media/CERN_logo.c80af144e1175ca176e4.png",
+    "index.html": "/home/index.html",
+    "main.b1a3edc1.css.map": "/home/static/css/main.b1a3edc1.css.map",
+    "main.5f20c246.js.map": "/home/static/js/main.5f20c246.js.map",
+    "787.6971d1b3.chunk.js.map": "/home/static/js/787.6971d1b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1a3edc1.css",
+    "static/js/main.5f20c246.js"
+  ]
+}
